@@ -1,0 +1,10 @@
+# En-têtes HTTP pour Netlify (pris en compte aussi en glisser-déposer)
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Favicon et images locales : mis en cache une semaine
+/assets/*
+  Cache-Control: public, max-age=604800
