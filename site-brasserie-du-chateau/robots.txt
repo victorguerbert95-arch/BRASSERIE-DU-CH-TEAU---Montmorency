@@ -1,0 +1,5 @@
+# TODO : remplacer le domaine par le vrai nom de domaine du site
+User-agent: *
+Allow: /
+
+Sitemap: https://www.brasserie-du-chateau-montmorency.fr/sitemap.xml

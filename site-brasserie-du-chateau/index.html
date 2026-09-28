@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- Active les styles « avec JavaScript » avant le premier rendu (évite les clignotements). -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- ============================================================
+       SEO local
+       TODO : remplacer https://www.brasserie-du-chateau-montmorency.fr/
+       par le vrai nom de domaine (ici, dans le JSON-LD, sitemap.xml et robots.txt).
+       ============================================================ -->
+  <title>Brasserie du Château – Bar, tabac &amp; brasserie à Montmorency (95)</title>
+  <meta name="description" content="Brasserie du Château, 127 bd de Montmorency : café dès 7h, plat du jour, couscous du jeudi, cocktails, bières et vins. Sur place, à emporter ou en livraison. 01 39 64 60 04.">
+  <link rel="canonical" href="https://www.brasserie-du-chateau-montmorency.fr/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#14261e">
+
+  <!-- Géolocalisation (aide les moteurs à rattacher le site à Montmorency) -->
+  <meta name="geo.region" content="FR-95">
+  <meta name="geo.placename" content="Montmorency">
+  <meta name="geo.position" content="48.97556;2.31694">
+  <meta name="ICBM" content="48.97556, 2.31694">
+
+  <!-- Partage sur les réseaux sociaux (Open Graph / Twitter) -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Brasserie du Château">
+  <meta property="og:title" content="Brasserie du Château – Montmorency">
+  <meta property="og:description" content="Bar, tabac et brasserie au 127 bd de Montmorency. Café dès 7h, plat du jour, couscous du jeudi. Noté 4,8/5 sur Google.">
+  <meta property="og:url" content="https://www.brasserie-du-chateau-montmorency.fr/">
+  <!-- TODO : remplacer par une vraie photo 1200×630 hébergée sur le site (ex. /assets/og-image.jpg) -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=75">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <!-- Polices : Fraunces (titres), Manrope (texte), Caveat (ardoise) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Données structurées schema.org « Restaurant » (fiche établissement pour Google).
+       Note : la note Google (4,8/5) n'est volontairement PAS balisée en aggregateRating :
+       Google ignore (voire pénalise) les avis « auto-publiés » sur la fiche d'un établissement. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "@id": "https://www.brasserie-du-chateau-montmorency.fr/#restaurant",
+    "name": "Brasserie du Château",
+    "alternateName": "Brasserie du Château Montmorency",
+    "description": "Bar-tabac et brasserie de quartier à Montmorency : café dès 7h, plat du jour, couscous du jeudi, cocktails, large choix de bières et de vins. Sur place, à emporter et en livraison.",
+    "url": "https://www.brasserie-du-chateau-montmorency.fr/",
+    "telephone": "+33139646004",
+    "image": [
+      "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=75",
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=75"
+    ],
+    "priceRange": "10–20 €",
+    "servesCuisine": ["Française", "Brasserie"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "127 Boulevard de Montmorency",
+      "addressLocality": "Montmorency",
+      "postalCode": "95160",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 48.97556,
+      "longitude": 2.31694
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Brasserie%20du%20Ch%C3%A2teau%2C%20127%20Bd%20de%20Montmorency%2C%2095160%20Montmorency",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
+    "acceptsReservations": true,
+    "hasMenu": "https://www.brasserie-du-chateau-montmorency.fr/#menu",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Carte de crédit, Carte de débit, Paiement mobile sans contact (NFC)",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuit", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Entrée accessible en fauteuil roulant", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Parking accessible en fauteuil roulant", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Retransmissions sportives", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Service à table", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Vente à emporter", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Livraison", "value": true }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ============================================================
+       Sprite d'icônes SVG (réutilisées via <use href="#i-...">)
+       ============================================================ -->
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-logo" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4.5 21V9h3v2h2V9h2v2h1V9h2v2h2V9h3v12"/><path d="M10 21v-3.5a2 2 0 0 1 4 0V21"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></symbol>
+    <symbol id="i-couscous" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M20 12a8 8 0 0 1-16 0"/><path d="M7 12c0-2 1.5-3 3-3s2 1 3 1 2-1 4-1c1 0 2 1 2 3"/><path d="M12 5v2M9 4.5l.5 2M15 4.5l-.5 2"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="16" cy="16" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-wine" viewBox="0 0 24 24"><path d="M8 22h8M7 10h10M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M12 20h.01"/></symbol>
+    <symbol id="i-access" viewBox="0 0 24 24"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></symbol>
+    <symbol id="i-package" viewBox="0 0 24 24"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.29 7 12 12l8.71-5M12 22V12"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5"/><path d="M14 17h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><path d="M3 12h18"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M9.5 17h5"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-chevron-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-chevron-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ============================================================
+       EN-TÊTE / NAVIGATION
+       ============================================================ -->
+  <header class="site-header" id="haut">
+    <div class="container header-inner">
+      <a class="brand" href="#haut" aria-label="Brasserie du Château – retour en haut de page">
+        <svg class="icon brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="brand-text">
+          <span class="brand-name">Brasserie du Château</span>
+          <span class="brand-place">Montmorency</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Ouvrir le menu</span>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#menu">La carte</a></li>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#photos">Photos</a></li>
+          <li><a href="#horaires">Horaires &amp; accès</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-brass btn-sm nav-call" href="tel:+33139646004">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+          01 39 64 60 04
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <!-- TODO : photo de la façade ou de la salle (format paysage, min. 1920 px de large) -->
+        <img
+          src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=1200&amp;q=75"
+          srcset="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=750&amp;q=70 750w,
+                  https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w,
+                  https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=2000&amp;q=75 2000w"
+          sizes="100vw"
+          alt="Salle chaleureuse de la Brasserie du Château à Montmorency, en fin de journée"
+          width="2000" height="1333"
+          fetchpriority="high">
+      </div>
+
+      <div class="container hero-content">
+        <p class="hero-eyebrow">Bar &middot; Tabac &middot; Brasserie</p>
+        <h1 class="hero-title" id="hero-title">
+          Brasserie <em>du Château</em>
+          <span class="hero-place">Montmorency</span>
+        </h1>
+        <p class="hero-lead">
+          Le petit café du matin, le plat du jour à midi, l’apéro entre amis le soir.
+          Votre adresse de quartier, toujours avec le sourire.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-brass btn-lg" href="tel:+33139646004">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            Appeler / Réserver
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#menu">
+            Voir la carte
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+
+        <ul class="hero-facts">
+          <li>
+            <a class="rating" href="https://www.google.com/maps/search/?api=1&amp;query=Brasserie%20du%20Ch%C3%A2teau%2C%20127%20Bd%20de%20Montmorency%2C%2095160%20Montmorency" target="_blank" rel="noopener">
+              <span class="rating-score">4,8</span>
+              <span class="stars" aria-hidden="true">
+                <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+              </span>
+              <span class="rating-count">106 avis Google</span>
+            </a>
+          </li>
+          <li>
+            <!-- Statut mis à jour en direct par js/main.js (heure de Paris) -->
+            <span class="status" data-status>
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-status-text>7h–20h en semaine</span>
+            </span>
+          </li>
+          <li class="hero-price">10–20&nbsp;€ / pers.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Bandeau des services -->
+    <div class="services-band" role="region" aria-label="Services proposés">
+      <ul class="container services-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg>Sur place</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>À emporter</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg>Livraison</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-package"/></svg>Retrait de colis</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-wifi"/></svg>Wi-Fi gratuit</li>
+      </ul>
+    </div>
+
+    <!-- ============================================================
+         LA CARTE
+         TODO : remplacer les plats et les prix par la vraie carte.
+         ============================================================ -->
+    <section class="section section-menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span>01</span> La carte</p>
+          <h2 id="menu-title">Du comptoir à l’assiette</h2>
+          <p class="section-intro">
+            Une cuisine de brasserie simple et généreuse, servie du matin au soir.
+            Tout est aussi disponible à emporter.
+          </p>
+        </header>
+
+        <!-- Ardoise : le rendez-vous de la semaine -->
+        <article class="ardoise" data-reveal aria-labelledby="ardoise-title">
+          <div class="ardoise-inner">
+            <p class="ardoise-kicker">Tous les jeudis</p>
+            <h3 class="ardoise-title" id="ardoise-title">Le couscous du Château</h3>
+            <p class="ardoise-text">
+              L’incontournable de la semaine, plébiscité par les habitués.
+              Semoule, légumes fondants, bouillon parfumé et viandes au choix.
+            </p>
+            <p class="ardoise-price">16,50&nbsp;€</p>
+            <p class="ardoise-note">Sur place ou à emporter &middot; pensez à réserver&nbsp;!</p>
+          </div>
+          <svg class="icon ardoise-icon" aria-hidden="true"><use href="#i-couscous"/></svg>
+        </article>
+
+        <!-- Onglets : sans JavaScript, toutes les catégories s'affichent l'une sous l'autre -->
+        <div class="menu-tabs" data-tabs>
+          <div class="tablist" role="tablist" aria-label="Catégories de la carte">
+            <button class="tab" role="tab" id="tab-matin" aria-controls="panel-matin" aria-selected="true">
+              <svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg>Le matin
+            </button>
+            <button class="tab" role="tab" id="tab-midi" aria-controls="panel-midi" aria-selected="false" tabindex="-1">
+              <svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg>Le midi
+            </button>
+            <button class="tab" role="tab" id="tab-bar" aria-controls="panel-bar" aria-selected="false" tabindex="-1">
+              <svg class="icon" aria-hidden="true"><use href="#i-wine"/></svg>Au bar
+            </button>
+          </div>
+
+          <!-- Le matin -->
+          <div class="tabpanel" role="tabpanel" id="panel-matin" aria-labelledby="tab-matin" tabindex="0">
+            <h3 class="panel-title">Le matin <small>dès 7h en semaine, 8h le week-end</small></h3>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-line"><h4>Expresso</h4><span class="dots" aria-hidden="true"></span><span class="price">1,80&nbsp;€</span></div>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Café crème / cappuccino</h4><span class="dots" aria-hidden="true"></span><span class="price">3,20&nbsp;€</span></div>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Chocolat chaud</h4><span class="dots" aria-hidden="true"></span><span class="price">3,50&nbsp;€</span></div>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Croissant ou pain au chocolat</h4><span class="dots" aria-hidden="true"></span><span class="price">1,50&nbsp;€</span></div>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Tartine beurre &amp; confiture</h4><span class="dots" aria-hidden="true"></span><span class="price">2,50&nbsp;€</span></div>
+              </li>
+              <li class="menu-item menu-item--star">
+                <div class="menu-line"><h4>Formule petit-déjeuner</h4><span class="dots" aria-hidden="true"></span><span class="price">7,50&nbsp;€</span></div>
+                <p>Boisson chaude, jus d’orange pressé, viennoiserie et tartine.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Le midi -->
+          <div class="tabpanel" role="tabpanel" id="panel-midi" aria-labelledby="tab-midi" tabindex="0">
+            <h3 class="panel-title">Le midi <small>service à table</small></h3>
+            <ul class="menu-list">
+              <li class="menu-item menu-item--star">
+                <div class="menu-line"><h4>Plat du jour</h4><span class="dots" aria-hidden="true"></span><span class="price">13,50&nbsp;€</span></div>
+                <p>Selon le marché, affiché sur l’ardoise. En formule avec un café&nbsp;: 15&nbsp;€.</p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Croque-monsieur, salade verte</h4><span class="dots" aria-hidden="true"></span><span class="price">11,00&nbsp;€</span></div>
+                <p>Jambon blanc, béchamel maison, emmental gratiné.</p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Salade César</h4><span class="dots" aria-hidden="true"></span><span class="price">13,00&nbsp;€</span></div>
+                <p>Poulet grillé, parmesan, croûtons, sauce César.</p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Burger du Château, frites</h4><span class="dots" aria-hidden="true"></span><span class="price">15,50&nbsp;€</span></div>
+                <p>Steak haché, cheddar affiné, oignons confits.</p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Entrecôte, frites maison</h4><span class="dots" aria-hidden="true"></span><span class="price">19,00&nbsp;€</span></div>
+                <p>Sauce au poivre ou béarnaise.</p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Dessert du jour</h4><span class="dots" aria-hidden="true"></span><span class="price">5,50&nbsp;€</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Au bar -->
+          <div class="tabpanel" role="tabpanel" id="panel-bar" aria-labelledby="tab-bar" tabindex="0">
+            <h3 class="panel-title">Au bar <small>grand choix de bières &amp; de vins</small></h3>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-line"><h4>Bière pression — demi / pinte</h4><span class="dots" aria-hidden="true"></span><span class="price">3,50 / 7,00&nbsp;€</span></div>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Bières bouteilles</h4><span class="dots" aria-hidden="true"></span><span class="price">dès 5,00&nbsp;€</span></div>
+                <p>Blondes, blanches, ambrées, IPA&nbsp;: demandez la sélection du moment.</p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Verre de vin</h4><span class="dots" aria-hidden="true"></span><span class="price">dès 4,50&nbsp;€</span></div>
+                <p>Rouge, blanc, rosé — aussi en pichet et en bouteille.</p>
+              </li>
+              <li class="menu-item menu-item--star">
+                <div class="menu-line"><h4>Cocktails maison</h4><span class="dots" aria-hidden="true"></span><span class="price">9,00&nbsp;€</span></div>
+                <p>Mojito, spritz, cocktail du moment… nos clients les adorent.</p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Planche mixte à partager</h4><span class="dots" aria-hidden="true"></span><span class="price">16,00&nbsp;€</span></div>
+                <p>Charcuterie et fromages, pain de campagne.</p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-line"><h4>Softs, jus de fruits, sirops</h4><span class="dots" aria-hidden="true"></span><span class="price">dès 3,00&nbsp;€</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="menu-footnote">
+          Carte susceptible d’évoluer selon les saisons. Prix nets, service compris.
+          L’abus d’alcool est dangereux pour la santé, à consommer avec modération.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         À PROPOS
+         ============================================================ -->
+    <section class="section section-about" id="a-propos" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-media" data-reveal>
+          <!-- TODO : photos de l'équipe / du comptoir -->
+          <figure class="about-photo about-photo--main">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&amp;fit=crop&amp;w=900&amp;q=70"
+                 alt="Le comptoir de la brasserie, prêt pour le service"
+                 width="900" height="1125" loading="lazy" decoding="async">
+          </figure>
+          <figure class="about-photo about-photo--small">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=600&amp;q=70"
+                 alt="Un café crème servi au comptoir"
+                 width="600" height="600" loading="lazy" decoding="async">
+          </figure>
+          <p class="about-badge"><strong>7j/7</strong> dès 7h</p>
+        </div>
+
+        <div class="about-text" data-reveal>
+          <p class="eyebrow"><span>02</span> À propos</p>
+          <h2 id="about-title">Le rendez-vous du quartier, du matin au soir</h2>
+          <p>
+            Au 127 boulevard de Montmorency, la Brasserie du Château vit au rythme de la ville&nbsp;:
+            l’expresso avalé au comptoir avant le train, le plat du jour entre collègues,
+            le match du week-end et l’apéritif qui s’éternise un peu.
+          </p>
+          <p>
+            Bar, tabac et brasserie, c’est une maison simple où l’on se sent vite chez soi.
+            L’équipe connaît les habitudes de chacun et accueille les nouveaux visages
+            avec la même attention. Seul, en famille, entre amis ou pour un
+            <strong>événement professionnel</strong>, il y a toujours une table pour vous.
+          </p>
+
+          <ul class="highlights">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-coffee"/></svg>Café &amp; tabac dès 7h</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-couscous"/></svg>Couscous du jeudi</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-wine"/></svg>Cocktails, bières &amp; vins</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-tv"/></svg>Retransmissions sportives</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-dice"/></svg>Jeux de café</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Événements pro &amp; groupes</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-package"/></svg>Point retrait colis</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-access"/></svg>Accessible PMR</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Avis clients (extraits d'avis Google publics) -->
+      <div class="container reviews" aria-labelledby="reviews-title">
+        <div class="reviews-head" data-reveal>
+          <h3 id="reviews-title">Ils en parlent mieux que nous</h3>
+          <p class="reviews-score">
+            <strong>4,8</strong>/5
+            <span class="stars" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>
+            sur 106 avis Google
+          </p>
+        </div>
+
+        <ul class="reviews-list">
+          <li class="review" data-reveal>
+            <blockquote>
+              <p>« Toujours sympa, avec le sourire, attentif. Mon café du matin est une super façon de démarrer ma journée. »</p>
+            </blockquote>
+            <p class="review-author">Nathalie F. <span>Local Guide</span></p>
+          </li>
+          <li class="review" data-reveal>
+            <blockquote>
+              <p>« Brice et Joël très sympathiques, du matin au soir. Événement pro possible et le couscous du jeudi est un incontournable. »</p>
+            </blockquote>
+            <p class="review-author">Stéphane R. <span>Local Guide</span></p>
+          </li>
+          <li class="review" data-reveal>
+            <blockquote>
+              <p>« Toujours bien accueillie, les employés sont très serviables. Place de stationnement pour les arrêts rapides juste devant. »</p>
+            </blockquote>
+            <p class="review-author">Papillon R. <span>Local Guide</span></p>
+          </li>
+        </ul>
+
+        <p class="reviews-cta">
+          <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Brasserie%20du%20Ch%C3%A2teau%2C%20127%20Bd%20de%20Montmorency%2C%2095160%20Montmorency" target="_blank" rel="noopener">
+            Lire tous les avis sur Google
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PHOTOS
+         TODO : remplacer par vos photos. Chaque lien <a> pointe vers la version
+         grand format, l'<img> vers la vignette.
+         ============================================================ -->
+    <section class="section section-gallery" id="photos" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span>03</span> Photos</p>
+          <h2 id="gallery-title">Un avant-goût de la maison</h2>
+        </header>
+
+        <ul class="gallery" data-gallery>
+          <li class="gallery-item gallery-item--wide">
+            <a href="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1800&amp;q=80">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=900&amp;q=70"
+                   alt="La salle de la brasserie" width="900" height="600" loading="lazy" decoding="async">
+            </a>
+          </li>
+          <li class="gallery-item gallery-item--tall">
+            <a href="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=1400&amp;q=80">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=600&amp;h=900&amp;q=70"
+                   alt="Un cocktail maison préparé au bar" width="600" height="900" loading="lazy" decoding="async">
+            </a>
+          </li>
+          <li class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=1400&amp;q=80">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=70"
+                   alt="Le burger du Château" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+          </li>
+          <li class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=1400&amp;q=80">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=70"
+                   alt="Croissants du petit-déjeuner" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+          </li>
+          <li class="gallery-item gallery-item--tall">
+            <a href="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&amp;fit=crop&amp;w=1400&amp;q=80">
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&amp;fit=crop&amp;w=600&amp;h=900&amp;q=70"
+                   alt="Un verre de vin rouge servi à table" width="600" height="900" loading="lazy" decoding="async">
+            </a>
+          </li>
+          <li class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&amp;fit=crop&amp;w=1400&amp;q=80">
+              <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&amp;fit=crop&amp;w=600&amp;h=600&amp;q=70"
+                   alt="Entrecôte grillée et frites" width="600" height="600" loading="lazy" decoding="async">
+            </a>
+          </li>
+          <li class="gallery-item gallery-item--wide">
+            <a href="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&amp;fit=crop&amp;w=1800&amp;q=80">
+              <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&amp;fit=crop&amp;w=900&amp;h=600&amp;q=70"
+                   alt="Le bar et sa sélection de bouteilles" width="900" height="600" loading="lazy" decoding="async">
+            </a>
+          </li>
+        </ul>
+
+        <p class="gallery-cta">
+          <a class="link-arrow" href="https://www.instagram.com/" target="_blank" rel="noopener">
+            <!-- TODO : mettre l'URL exacte du compte Instagram -->
+            Plus de photos sur Instagram
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HORAIRES & ACCÈS
+         Les horaires ci-dessous sont la source utilisée par le JavaScript
+         pour afficher « Ouvert / Fermé ». Pensez aussi à mettre à jour le JSON-LD.
+         ============================================================ -->
+    <section class="section section-hours" id="horaires" aria-labelledby="hours-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow"><span>04</span> Horaires &amp; accès</p>
+          <h2 id="hours-title">Ouvert 7 jours sur 7</h2>
+        </header>
+
+        <div class="hours-grid">
+          <div class="hours-card" data-reveal>
+            <p class="status status--card" data-status>
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-status-text>Horaires d’ouverture</span>
+            </p>
+
+            <table class="hours-table" data-hours>
+              <caption class="visually-hidden">Horaires d’ouverture de la Brasserie du Château</caption>
+              <tbody>
+                <!-- data-day : 1 = lundi … 7 = dimanche -->
+                <tr data-day="1" data-open="07:00" data-close="20:00"><th scope="row">Lundi</th><td>7h00 – 20h00</td></tr>
+                <tr data-day="2" data-open="07:00" data-close="20:00"><th scope="row">Mardi</th><td>7h00 – 20h00</td></tr>
+                <tr data-day="3" data-open="07:00" data-close="20:00"><th scope="row">Mercredi</th><td>7h00 – 20h00</td></tr>
+                <tr data-day="4" data-open="07:00" data-close="20:00"><th scope="row">Jeudi <span class="tag">couscous</span></th><td>7h00 – 20h00</td></tr>
+                <tr data-day="5" data-open="07:00" data-close="20:00"><th scope="row">Vendredi</th><td>7h00 – 20h00</td></tr>
+                <tr data-day="6" data-open="08:00" data-close="20:00"><th scope="row">Samedi</th><td>8h00 – 20h00</td></tr>
+                <tr data-day="7" data-open="08:00" data-close="20:00"><th scope="row">Dimanche</th><td>8h00 – 20h00</td></tr>
+              </tbody>
+            </table>
+            <p class="hours-note">Horaires susceptibles de varier les jours fériés.</p>
+          </div>
+
+          <div class="map-wrap" data-reveal>
+            <div class="map-frame">
+              <iframe
+                title="Plan d’accès : Brasserie du Château, 127 boulevard de Montmorency"
+                src="https://www.google.com/maps?q=Brasserie%20du%20Ch%C3%A2teau%2C%20127%20Bd%20de%20Montmorency%2C%2095160%20Montmorency&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+
+            <address class="map-address">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <span>127 Bd de Montmorency<br>95160 Montmorency</span>
+            </address>
+
+            <a class="btn btn-green" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie%20du%20Ch%C3%A2teau%2C%20127%20Bd%20de%20Montmorency%2C%2095160%20Montmorency" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>
+              Itinéraire
+            </a>
+
+            <ul class="access-list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg><span><strong>Stationnement facile</strong>, gratuit dans la rue, place pour les arrêts minute juste devant.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-access"/></svg><span><strong>Accessible en fauteuil roulant</strong>&nbsp;: entrée et stationnement adaptés.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-main" data-reveal>
+          <p class="eyebrow eyebrow--light"><span>05</span> Contact</p>
+          <h2 id="contact-title">Une table, une commande, une question&nbsp;?</h2>
+          <p>
+            Le plus simple, c’est de nous appeler&nbsp;: réservations, commandes à emporter,
+            livraison ou organisation d’un événement, l’équipe vous répond pendant les heures d’ouverture.
+          </p>
+          <a class="phone-big" href="tel:+33139646004">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            01 39 64 60 04
+          </a>
+          <p class="contact-small">Réservations acceptées &middot; groupes bienvenus</p>
+        </div>
+
+        <div class="contact-cards" data-reveal>
+          <div class="contact-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Adresse</h3>
+            <p>127 Bd de Montmorency<br>95160 Montmorency</p>
+            <a class="link-arrow" href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie%20du%20Ch%C3%A2teau%2C%20127%20Bd%20de%20Montmorency%2C%2095160%20Montmorency" target="_blank" rel="noopener">Itinéraire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="contact-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>Instagram</h3>
+            <p>Plats du jour, soirées matchs et nouveautés.</p>
+            <!-- TODO : mettre l'URL exacte du compte Instagram -->
+            <a class="link-arrow" href="https://www.instagram.com/" target="_blank" rel="noopener">Nous suivre <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="contact-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg>Services</h3>
+            <p>Sur place avec service à table, vente à emporter et livraison.</p>
+          </div>
+          <div class="contact-card">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg>Paiement</h3>
+            <p>Cartes bancaires, cartes de débit et paiement mobile sans contact.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       PIED DE PAGE
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="icon brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <p><strong>Brasserie du Château</strong><br>Bar &middot; Tabac &middot; Brasserie</p>
+      </div>
+      <p class="footer-nap">
+        127 Bd de Montmorency, 95160 Montmorency<br>
+        <a href="tel:+33139646004">01 39 64 60 04</a>
+      </p>
+      <p class="footer-legal">
+        &copy; <span data-year>2026</span> Brasserie du Château &middot;
+        <a href="mentions-legales.html">Mentions légales</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Barre d'actions fixe sur mobile : appeler / itinéraire / horaires -->
+  <nav class="mobile-bar" aria-label="Actions rapides">
+    <a class="mobile-bar-call" href="tel:+33139646004">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+      Appeler
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Brasserie%20du%20Ch%C3%A2teau%2C%20127%20Bd%20de%20Montmorency%2C%2095160%20Montmorency" target="_blank" rel="noopener">
+      <svg class="icon" aria-hidden="true"><use href="#i-route"/></svg>
+      Itinéraire
+    </a>
+    <a href="#horaires">
+      <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+      Horaires
+    </a>
+  </nav>
+
+  <!-- Visionneuse photo (ouverte par js/main.js) -->
+  <dialog class="lightbox" aria-label="Visionneuse de photos">
+    <button class="lightbox-btn lightbox-close" type="button" aria-label="Fermer">
+      <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="Photo précédente">
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron-l"/></svg>
+    </button>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" src="data:," alt="">
+      <figcaption class="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="Photo suivante">
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron-r"/></svg>
+    </button>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
