@@ -7,7 +7,7 @@ en bas de l'écran, numéro de téléphone cliquable partout.
 ## Structure
 
 ```
-site-brasserie-du-chateau/
+(racine du dépôt)
 ├── index.html            Page unique (hero, carte, à propos, photos, horaires, contact)
 ├── mentions-legales.html Mentions légales (à compléter)
 ├── 404.html              Page d'erreur (servie automatiquement par Vercel et Netlify)
@@ -24,20 +24,21 @@ site-brasserie-du-chateau/
 N'importe quel serveur statique convient, par exemple :
 
 ```bash
-cd site-brasserie-du-chateau
 python3 -m http.server 8000
 # puis ouvrir http://localhost:8000
 ```
 
 ## Mettre en ligne
 
-**Netlify** : glisser-déposer le dossier `site-brasserie-du-chateau` sur
-<https://app.netlify.com/drop>, ou connecter le dépôt Git avec
-*Base directory* = `site-brasserie-du-chateau`, sans commande de build et
-*Publish directory* = `site-brasserie-du-chateau`.
+Les fichiers du site sont à la racine du dépôt : aucun réglage de dossier n'est nécessaire.
 
-**Vercel** : importer le dépôt, choisir *Root Directory* =
-`site-brasserie-du-chateau`, *Framework Preset* = « Other », sans commande de build.
+**Netlify** : *Add new site → Import an existing project*, choisir le dépôt GitHub,
+laisser *Base directory* vide, *Build command* vide et *Publish directory* vide
+(ou `.`). Netlify trouve directement `index.html`.
+Alternative sans Git : glisser-déposer le contenu du dépôt sur <https://app.netlify.com/drop>.
+
+**Vercel** : importer le dépôt, *Framework Preset* = « Other », sans commande
+de build ni dossier racine à préciser.
 
 ## À personnaliser avant la mise en ligne
 
